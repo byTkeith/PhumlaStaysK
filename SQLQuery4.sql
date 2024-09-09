@@ -1,0 +1,2 @@
+﻿INSERT INTO Bookings (GuestID, CheckInDate, CheckOutDate, RoomType, Season, RoomRate, DepositPaid) VALUES
+((SELECT GuestID FROM Guests WHERE FullName = 'John Smith'), '2024-12-25', '2024-12-26', 'Standard', 'High Season', 995, 99.5);

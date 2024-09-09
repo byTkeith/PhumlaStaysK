@@ -48,7 +48,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
                 {
                     guest = new Guest();
 
-                    guest.IdNumber = Convert.ToString(myRow["idNumber"]).TrimEnd();
+                    guest.GuestID = Convert.ToString(myRow["GuestID"]).TrimEnd();
                     guest.Title = Convert.ToString(myRow["title"]).TrimEnd();
                     guest.FirstName = Convert.ToString(myRow["firstName"]).TrimEnd();
                     guest.LastName = Convert.ToString(myRow["lastName"]).TrimEnd();
@@ -67,7 +67,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
             {
 
 
-                row["idNumber"] = guest.IdNumber;
+                row["GuestID"] = guest.GuestID;
 
 
             }
@@ -88,7 +88,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
                 myRow = row;
                 if (myRow.RowState != DataRowState.Deleted)
                 {
-                    if (guest.IdNumber == Convert.ToString(dataSet.Tables[table].Rows[rowIndex]["idNumber"]))
+                    if (guest.GuestID == Convert.ToString(dataSet.Tables[table].Rows[rowIndex]["idNumber"]))
                     {
                         returnValue = rowIndex;
                     }
@@ -135,7 +135,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
         private void Create_INSERT_Parameters(Guest guest)
         {
             dataAdapter.InsertCommand = new SqlCommand(
-                "INSERT INTO guests (idNumber,title, firstName, lastName, email, telephone , address) values(@idNumber,@title,  @firstName, @lastName ,@email, @telephone, @address)", connection
+                "INSERT INTO guests (GuestID,title, firstName, lastName, email, telephone , address) values(@idNumber,@title,  @firstName, @lastName ,@email, @telephone, @address)", connection
                 );
 
             Build_INSERT_Parameters(guest);

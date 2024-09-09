@@ -75,14 +75,14 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
 
             foreach (Guest guest in guests)
             {
-                guestDetails = new ListViewItem(guest.IdNumber.ToString());
+                guestDetails = new ListViewItem(guest.GuestID.ToString());
               
                 guestDetails.SubItems.Add(guest.FirstName.ToString());
               
                 guestDetails.SubItems.Add(guest.Email.ToString());
                 guestDetails.SubItems.Add(guest.Telephone.ToString());
                 guestDetails.SubItems.Add(guest.Address.ToString());
-                guestDetails.SubItems.Add(CalculateUnpaidAmountForGuest(guest.IdNumber , bookings).ToString());
+                guestDetails.SubItems.Add(CalculateUnpaidAmountForGuest(guest.GuestID , bookings).ToString());
                 guestListView.Items.Add(guestDetails);
             }
             guestListView.Refresh();
@@ -152,12 +152,12 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
                     guest.Email.ToLower().Contains(searchTerm) ||
                     guest.Telephone.ToLower().Contains(searchTerm))
                 {
-                    ListViewItem guestDetails = new ListViewItem(guest.IdNumber.ToString());
+                    ListViewItem guestDetails = new ListViewItem(guest.GuestID.ToString());
                     guestDetails.SubItems.Add(guest.FirstName.ToString());
                     guestDetails.SubItems.Add(guest.Email.ToString());
                     guestDetails.SubItems.Add(guest.Telephone.ToString());
                     guestDetails.SubItems.Add(guest.Address.ToString());
-                    guestDetails.SubItems.Add(CalculateUnpaidAmountForGuest(guest.IdNumber, bookings).ToString());
+                    guestDetails.SubItems.Add(CalculateUnpaidAmountForGuest(guest.GuestID, bookings).ToString());
                     guestListView.Items.Add(guestDetails);
                 }
             }
