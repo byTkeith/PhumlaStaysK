@@ -1,2 +1,13 @@
-﻿INSERT INTO Bookings (GuestID, CheckInDate, CheckOutDate, RoomType, Season, RoomRate, DepositPaid) VALUES
-((SELECT GuestID FROM Guests WHERE FullName = 'John Smith'), '2024-12-25', '2024-12-26', 'Standard', 'High Season', 995, 99.5);
+﻿CREATE TABLE Bookings (
+    Id NVARCHAR(50) PRIMARY KEY,
+    GuestId NVARCHAR(50),
+    CheckInDate DATETIME,
+    CheckOutDate DATETIME,
+    NumberOfRooms INT,
+    SpecialRequest NVARCHAR(255),
+    NumberOfGuests INT,
+    Deposit INT,
+    TotalAmount INT,
+    BookingStatusId INT,
+    CONSTRAINT FK_Bookings_Guests FOREIGN KEY (GuestId) REFERENCES Guests(GuestID)
+);
