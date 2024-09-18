@@ -30,73 +30,42 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIParent));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.logoBox = new System.Windows.Forms.Panel();
             this.logoutButton = new System.Windows.Forms.Button();
             this.guestNavLabel = new System.Windows.Forms.Label();
             this.bookingNavLabel = new System.Windows.Forms.Label();
             this.homeNavLabel = new System.Windows.Forms.Label();
             this.bookingSystemDataSet1 = new Phumla_Kumnandi_Hotel_Reservation_System.bookingSystemDataSet();
-            this.logoBox = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.bookingSystemDataSet2 = new Phumla_Kumnandi_Hotel_Reservation_System.bookingSystemDataSet();
+            this.exitButton = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSystemDataSet1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingSystemDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.logoBox);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.logoutButton);
-            this.panel1.Controls.Add(this.guestNavLabel);
-            this.panel1.Controls.Add(this.bookingNavLabel);
-            this.panel1.Controls.Add(this.homeNavLabel);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(305, 730);
             this.panel1.TabIndex = 3;
             // 
-            // pictureBox4
+            // logoBox
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(19, 193);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.homeNavLabel_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(20, 276);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.bookingNavLabel_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(19, 370);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(74, 60);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.guestNavLabel_Click);
+            this.logoBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoBox.BackgroundImage")));
+            this.logoBox.Location = new System.Drawing.Point(12, 6);
+            this.logoBox.Name = "logoBox";
+            this.logoBox.Size = new System.Drawing.Size(266, 118);
+            this.logoBox.TabIndex = 4;
             // 
             // logoutButton
             // 
@@ -117,8 +86,8 @@
             // 
             this.guestNavLabel.AutoSize = true;
             this.guestNavLabel.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guestNavLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.guestNavLabel.Location = new System.Drawing.Point(88, 370);
+            this.guestNavLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.guestNavLabel.Location = new System.Drawing.Point(659, 13);
             this.guestNavLabel.Name = "guestNavLabel";
             this.guestNavLabel.Size = new System.Drawing.Size(134, 42);
             this.guestNavLabel.TabIndex = 0;
@@ -129,8 +98,8 @@
             // 
             this.bookingNavLabel.AutoSize = true;
             this.bookingNavLabel.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookingNavLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.bookingNavLabel.Location = new System.Drawing.Point(88, 276);
+            this.bookingNavLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.bookingNavLabel.Location = new System.Drawing.Point(347, 13);
             this.bookingNavLabel.Name = "bookingNavLabel";
             this.bookingNavLabel.Size = new System.Drawing.Size(171, 42);
             this.bookingNavLabel.TabIndex = 0;
@@ -140,9 +109,10 @@
             // homeNavLabel
             // 
             this.homeNavLabel.AutoSize = true;
+            this.homeNavLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(98)))), ((int)(((byte)(96)))));
             this.homeNavLabel.Font = new System.Drawing.Font("Arial", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeNavLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.homeNavLabel.Location = new System.Drawing.Point(88, 190);
+            this.homeNavLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.homeNavLabel.Location = new System.Drawing.Point(73, 12);
             this.homeNavLabel.Name = "homeNavLabel";
             this.homeNavLabel.Size = new System.Drawing.Size(120, 43);
             this.homeNavLabel.TabIndex = 0;
@@ -154,35 +124,86 @@
             this.bookingSystemDataSet1.DataSetName = "bookingSystemDataSet";
             this.bookingSystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // logoBox
+            // panel2
             // 
-            this.logoBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoBox.BackgroundImage")));
-            this.logoBox.Location = new System.Drawing.Point(12, 12);
-            this.logoBox.Name = "logoBox";
-            this.logoBox.Size = new System.Drawing.Size(266, 118);
-            this.logoBox.TabIndex = 4;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(98)))), ((int)(((byte)(96)))));
+            this.panel2.Controls.Add(this.exitButton);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.guestNavLabel);
+            this.panel2.Controls.Add(this.homeNavLabel);
+            this.panel2.Controls.Add(this.bookingNavLabel);
+            this.panel2.Location = new System.Drawing.Point(304, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(916, 72);
+            this.panel2.TabIndex = 5;
+            // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(593, 6);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(60, 60);
+            this.panel5.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Location = new System.Drawing.Point(281, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(60, 60);
+            this.panel4.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(7, 6);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(60, 60);
+            this.panel3.TabIndex = 4;
+            // 
+            // bookingSystemDataSet2
+            // 
+            this.bookingSystemDataSet2.DataSetName = "bookingSystemDataSet";
+            this.bookingSystemDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // exitButton
+            // 
+            this.exitButton.AutoSize = true;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Location = new System.Drawing.Point(884, 9);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(24, 24);
+            this.exitButton.TabIndex = 7;
+            this.exitButton.Text = "X";
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // MDIParent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1024, 605);
+            this.ClientSize = new System.Drawing.Size(1220, 605);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MDIParent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MDIParent";
             this.Load += new System.EventHandler(this.MDIParent_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSystemDataSet1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingSystemDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,10 +215,13 @@
         private System.Windows.Forms.Label guestNavLabel;
         private System.Windows.Forms.Label bookingNavLabel;
         private System.Windows.Forms.Label homeNavLabel;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel logoBox;
         private bookingSystemDataSet bookingSystemDataSet1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private bookingSystemDataSet bookingSystemDataSet2;
+        private System.Windows.Forms.Label exitButton;
     }
 }

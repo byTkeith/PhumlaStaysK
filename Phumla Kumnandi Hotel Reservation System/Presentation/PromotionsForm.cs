@@ -16,5 +16,10 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
         {
             InitializeComponent();
         }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

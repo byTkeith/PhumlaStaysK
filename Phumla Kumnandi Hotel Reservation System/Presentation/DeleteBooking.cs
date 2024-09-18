@@ -21,8 +21,8 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
             this.booking = booking;
             this.bookingController = MDIParent.GetBookingController();
             nameLabel.Text = booking.GuestId;
-            bookingDateLabel.Text = booking.CheckInDate.ToString("yyyy-MM-dd") + " to " + booking.CheckOutDate.ToString("yyyy-MM-dd");
-            totalPriceLabel.Text = booking.TotalAmount.ToString();
+            label3.Text = booking.CheckInDate.ToString("yyyy-MM-dd") + " to " + booking.CheckOutDate.ToString("yyyy-MM-dd");
+            label4.Text = booking.TotalAmount.ToString();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

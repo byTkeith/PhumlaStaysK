@@ -134,7 +134,6 @@
             // 
             // searchBox
             // 
-            this.searchBox.BackColor = System.Drawing.Color.White;
             this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchBox.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBox.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -143,16 +142,19 @@
             this.searchBox.Size = new System.Drawing.Size(262, 39);
             this.searchBox.TabIndex = 9;
             this.searchBox.Text = "Search by Id";
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
-            // Promotions
+            // PromotionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1184, 711);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.panel1);
-            this.Name = "Promotions";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "PromotionsForm";
             this.Text = "Promotions";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

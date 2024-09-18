@@ -251,5 +251,15 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
         {
             listFormClosed = true;
         }
+
+        private void occupiedRoomLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

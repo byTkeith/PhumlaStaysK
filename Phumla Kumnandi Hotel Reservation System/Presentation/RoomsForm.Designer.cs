@@ -39,10 +39,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1046, 148);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(784, 120);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 18);
+            this.label6.Size = new System.Drawing.Size(35, 15);
             this.label6.TabIndex = 7;
             this.label6.Text = "Filter";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -51,21 +50,19 @@
             // 
             this.roomSelectionLabel.AutoSize = true;
             this.roomSelectionLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomSelectionLabel.Location = new System.Drawing.Point(65, 129);
-            this.roomSelectionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.roomSelectionLabel.Location = new System.Drawing.Point(49, 105);
             this.roomSelectionLabel.Name = "roomSelectionLabel";
-            this.roomSelectionLabel.Size = new System.Drawing.Size(161, 35);
+            this.roomSelectionLabel.Size = new System.Drawing.Size(132, 29);
             this.roomSelectionLabel.TabIndex = 8;
             this.roomSelectionLabel.Text = "All Rooms";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(71, 205);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(53, 167);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1097, 602);
+            this.dataGridView1.Size = new System.Drawing.Size(823, 489);
             this.dataGridView1.TabIndex = 6;
             // 
             // searchBox
@@ -74,25 +71,23 @@
             this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchBox.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBox.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.searchBox.Location = new System.Drawing.Point(819, 31);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(4);
+            this.searchBox.Location = new System.Drawing.Point(614, 25);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(349, 46);
+            this.searchBox.Size = new System.Drawing.Size(262, 39);
             this.searchBox.TabIndex = 5;
             this.searchBox.Text = "Search by room No";
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // RoomsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 822);
+            this.ClientSize = new System.Drawing.Size(891, 640);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.roomSelectionLabel);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.searchBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RoomsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Rooms";
