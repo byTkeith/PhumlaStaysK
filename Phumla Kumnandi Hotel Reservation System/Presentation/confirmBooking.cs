@@ -92,7 +92,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
             bookingController.DataMaintenance(booking, Data.DB.DBOperation.Add);
             bookingController.FinalizeChanges(booking);
            
-            MessageBox.Show("Booking has been sucessfully made");
+            MessageBox.Show("YouBooking has been confirmed;)");
   EmailGuest();
             this.Close();
           
@@ -189,6 +189,16 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ConfirmBooking_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstNameInput_TextChanged(object sender, EventArgs e)
         {
 
         }

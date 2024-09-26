@@ -170,6 +170,7 @@
             this.firstNameInput.Name = "firstNameInput";
             this.firstNameInput.Size = new System.Drawing.Size(245, 22);
             this.firstNameInput.TabIndex = 27;
+            this.firstNameInput.TextChanged += new System.EventHandler(this.firstNameInput_TextChanged);
             // 
             // specialRequestInput
             // 
@@ -273,6 +274,7 @@
             this.Name = "ConfirmBooking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "confirmBooking";
+            this.Load += new System.EventHandler(this.ConfirmBooking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numberOfGuestPicker)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

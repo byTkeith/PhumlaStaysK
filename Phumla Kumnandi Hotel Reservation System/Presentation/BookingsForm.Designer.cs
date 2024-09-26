@@ -33,6 +33,7 @@
             this.searchInput = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.showAllButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bookingListView
@@ -55,7 +56,7 @@
             this.dataLanel.BackColor = System.Drawing.Color.Transparent;
             this.dataLanel.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataLanel.ForeColor = System.Drawing.Color.White;
-            this.dataLanel.Location = new System.Drawing.Point(1, 104);
+            this.dataLanel.Location = new System.Drawing.Point(1, 94);
             this.dataLanel.Name = "dataLanel";
             this.dataLanel.Size = new System.Drawing.Size(386, 44);
             this.dataLanel.TabIndex = 15;
@@ -102,12 +103,23 @@
             this.showAllButton.UseVisualStyleBackColor = false;
             this.showAllButton.Click += new System.EventHandler(this.showAllButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(345, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "label1";
+            // 
             // BookingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(902, 568);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.showAllButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchInput);
@@ -131,5 +143,6 @@
         private System.Windows.Forms.TextBox searchInput;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button showAllButton;
+        private System.Windows.Forms.Label label1;
     }
 }
