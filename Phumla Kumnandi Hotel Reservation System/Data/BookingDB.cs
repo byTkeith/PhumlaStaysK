@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Phumla_Kumnandi_Hotel_Reservation_System.Business;
-
+//added factor form
 namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
 {
     public class BookingDB : DB
