@@ -14,8 +14,8 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
     {
 
         #region data members
-        private string bookingTable = "bookings";
-        private string sqlLocal1 = "SELECT * FROM bookings";
+        private string bookingTable = "Bookings";
+        private string sqlLocal1 = "SELECT * FROM Bookings";
         private Collection<Booking> bookings;
         #endregion
 
@@ -143,7 +143,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
         private void Create_INSERT_Parameters(Booking booking)
         {
             dataAdapter.InsertCommand = new SqlCommand(
-                "INSERT INTO bookings (id,numberOfRooms,guestId, bookingStatusId, checkInDate, checkOutDate, numberOfGuests, deposit , totalAmount, specialRequest) values (@id , @numberOfRooms,@guestId ,  @bookingStatusId, @checkInDate, @checkOutDate, @numberOfGuests, @deposit , @totalAmount, @specialRequest)", connection
+                "INSERT INTO Bookings (id,numberOfRooms,guestId, bookingStatusId, checkInDate, checkOutDate, numberOfGuests, deposit , totalAmount, specialRequest) values (@id , @numberOfRooms,@guestId ,  @bookingStatusId, @checkInDate, @checkOutDate, @numberOfGuests, @deposit , @totalAmount, @specialRequest)", connection
                 );
 
             Build_INSERT_Parameters(booking);
@@ -164,7 +164,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
 
         private void Create_UPDATE_Parameters(Booking booking)
         {
-            dataAdapter.UpdateCommand = new SqlCommand("UPDATE bookings SET numberOfRooms = @numberOfRooms, guestId = @guestId, bookingStatusId = @bookingStatusId, checkInDate = @checkInDate, checkOutDate = @checkOutDate, numberOfGuests = @numberOfGuests, deposit = @deposit, totalAmount = @totalAmount, specialRequest = @specialRequest WHERE id = @originalId", connection);
+            dataAdapter.UpdateCommand = new SqlCommand("UPDATE Bookings SET numberOfRooms = @numberOfRooms, guestId = @guestId, bookingStatusId = @bookingStatusId, checkInDate = @checkInDate, checkOutDate = @checkOutDate, numberOfGuests = @numberOfGuests, deposit = @deposit, totalAmount = @totalAmount, specialRequest = @specialRequest WHERE id = @originalId", connection);
 
 
             Build_UPDATE_Parameters(booking);
@@ -235,7 +235,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
 
         private void Create_DELETE_Parameters(Booking booking)
         {
-            dataAdapter.DeleteCommand = new SqlCommand("DELETE from bookings WHERE id = @id", connection);
+            dataAdapter.DeleteCommand = new SqlCommand("DELETE from Bookings WHERE id = @id", connection);
             Build_DELETE_Parameters(booking);
 
         }

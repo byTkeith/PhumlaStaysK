@@ -15,7 +15,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
 
         #region instance variables 
         private string guestTable = "rooms";
-        private string sqlLocal1 = "SELECT * FROM room";
+        private string sqlLocal1 = "SELECT * FROM rooms";
         private Collection<Room> rooms;
 
         #endregion

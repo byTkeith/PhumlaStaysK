@@ -144,6 +144,10 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
             }
             bookingsForm.setUpBookingListView();
             bookingsForm.Show();
+
+            MessageBox.Show("Click the client's BookingID to make any changes:\nDelete, Edit or Pay",
+                   "Edit Instructions",
+                   MessageBoxButtons.OK);
         }
 
         private void guestNavLabel_Click(object sender, EventArgs e)

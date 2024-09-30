@@ -14,8 +14,8 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
     {
 
         #region instance variables 
-        private string guestTable = "guests";
-        private string sqlLocal1 = "SELECT * FROM guests";
+        private string guestTable = "Guests";
+        private string sqlLocal1 = "SELECT * FROM Guests";
         private Collection<Guest> guests;
 
         #endregion
@@ -67,7 +67,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
             {
 
 
-                row["GuestID"] = guest.GuestID;
+                row["idNumber"] = guest.GuestID;
 
 
             }
@@ -135,7 +135,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
         private void Create_INSERT_Parameters(Guest guest)
         {
             dataAdapter.InsertCommand = new SqlCommand(
-                "INSERT INTO guests (GuestID,title, firstName, lastName, email, telephone , address) values(@idNumber,@title,  @firstName, @lastName ,@email, @telephone, @address)", connection
+                "INSERT INTO Guests (idNumber,title, firstName, lastName, email, telephone , address) values(@idNumber,@title,  @firstName, @lastName ,@email, @telephone, @address)", connection
                 );
 
             Build_INSERT_Parameters(guest);
