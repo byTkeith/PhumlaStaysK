@@ -11,7 +11,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Business
     {
         #region DataMembers
      
-        private string _GuestID;
+        private string _idNumber;
         private string _FirstName;
         private string _LastName;
         private string _Telephone;
@@ -22,10 +22,10 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Business
         #endregion
         #region methods
 
-        public string GuestID
+        public string idNumber
         {
-            get { return _GuestID; }
-            set { _GuestID = value; }
+            get { return _idNumber; }
+            set { _idNumber = value; }
         }
      
         public string FirstName

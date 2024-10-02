@@ -21,5 +21,20 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
         {
 
         }
+
+        private void promotionNavLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PromotionsForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roomNavLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

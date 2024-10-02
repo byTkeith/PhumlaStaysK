@@ -40,7 +40,9 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
             checkInDateTimePicker.Enabled = false;
             checkOutDateTimePicker.Enabled = false;
             numberOfGuestPicker.Enabled = false;
-            specialRequestInput.Text = "Enter your request";
+            //specialRequestInput.Text = "Enter your request";
+            this.specialRequestInput.Enter += new System.EventHandler(this.specialRequestInput_TextChanged);
+            this.specialRequestInput.Leave += new System.EventHandler(this.specialRequestInput_Leave);
             specialRequestInput.ForeColor = Color.Gray;
 
             this.bookingController = MDIParent.GetBookingController();
@@ -92,75 +94,11 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
             bookingController.DataMaintenance(booking, Data.DB.DBOperation.Add);
             bookingController.FinalizeChanges(booking);
            
-            MessageBox.Show("YouBooking has been confirmed;)");
-  EmailGuest();
+            MessageBox.Show("Your Booking has been confirmed;)");
             this.Close();
-          
-
-
+  
         }
-        private void EmailGuest()
-        {
-            string senderEmail = "phumla056@gmail.com";
-            string senderPassword = "rhni jiwt mrvi ewln";
-
-            // Recipient's email address
-            string recipientEmail = guest.Email;
-
-            // Create a new MailMessage
-            // Create a new MailMessage
-            MailMessage mail = new MailMessage();
-            mail.From = new MailAddress(senderEmail);
-            mail.To.Add(recipientEmail);
-            mail.Subject = "PhumlaStays: Booking Confirmed";
-            mail.Body = $"Dear {guest.Title} {guest.LastName},\n\n" +
-            $"Thank you for booking with us from: {booking.CheckInDate:yyyy-MM-dd} to {booking.CheckOutDate:yyyy-MM-dd} at Phumla Kumnandi Hotel. We look forward to welcoming you and ensuring that your stay is comfortable and enjoyable.\n\n" +
-            "Booking Details:\n" +
-            $"- Check-in Date: {booking.CheckInDate:yyyy-MM-dd}\n" +
-            $"- Check-out Date: {booking.CheckOutDate:yyyy-MM-dd}\n\n" +
-            $"Please kindly confirm your booking by making a confirmation deposit of the amount {booking.TotalAmount:C2} payable using:\n\n" +
-            "Bank Transfer Details:\n" +
-            "Bank Name: TendaiExec Bank\n" +
-            "Account Holder: PhumlaStays Inc\n" +
-            "Account Number: 000000 00000 00\n" +
-            "IBAN: 123\n" +
-            "SWIFT/BIC Code: 123\n\n" +
-            $"Kindly include your booking reference number, {booking.Id}.\n\n" +
-
-            "Once we receive your deposit payment, we will send you a confirmation email along with any additional details you may need for your stay.\n\n" +
-            "Thank you for choosing Phumla Hotels. We are excited to host you, and we are confident that your stay with us will be a memorable one. If you have any special requests or preferences, please let us know in advance so that we can make arrangements to enhance your experience.\n\n" +
-            "We appreciate your trust in us and look forward to providing you with exceptional service.\n\n" +
-            "Warm regards,\n" +
-            "Receptionist\n" +
-
-            "PhumlaStays Inc\n" +
-            "phumlaStaysInc@co.za\n" +
-            "000000000";
-
-            // Create a new SmtpClient
-            SmtpClient smtpClient = new SmtpClient("smtp.gmail.com");
-            smtpClient.Port = 587;
-            smtpClient.UseDefaultCredentials = false;
-            smtpClient.Credentials = new NetworkCredential(senderEmail, senderPassword);
-            smtpClient.EnableSsl = true;
-
-            try
-            {
-                // Send the email
-                smtpClient.Send(mail);
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.ToString());
-
-            }
-            finally
-            {
-                // Clean up resources
-                mail.Dispose();
-                smtpClient.Dispose();
-            }
-        }
+       
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();

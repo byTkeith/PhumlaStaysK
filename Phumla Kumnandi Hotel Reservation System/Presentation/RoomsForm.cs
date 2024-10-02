@@ -1,4 +1,5 @@
 ﻿using Phumla_Kumnandi_Hotel_Reservation_System.Business;
+using Phumla_Kumnandi_Hotel_Reservation_System.Data;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,12 +10,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Phumla_Kumnandi_Hotel_Reservation_System.Business;
+using Phumla_Kumnandi_Hotel_Reservation_System.Data;
+using static Phumla_Kumnandi_Hotel_Reservation_System.Presentation.BookingsForm;
+
 
 namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
 {
     public partial class RoomsForm : Form
     {
         public bool listFormClosed;
+       // public bool listFormClosed;
+        private Collection<Booking> bookings;
+        private Collection<Guest> guests;
+        private BookingController bookingController;
+        private GuestController guestController;
+        private FormState state;
+        private Booking booking;
+        private Guest guest;
         public RoomsForm()
         {
             InitializeComponent();
@@ -22,7 +35,29 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
 
         private void Rooms_Load(object sender, EventArgs e)
         {
+            SetupDataGridView();
             PopulateRooms();
+            //PopulateRooms();
+        }
+       
+        private void SetupDataGridView()
+        {
+            ListViewItem guestDetails;
+            dataGridView1.Columns.Clear();
+            //bookings = bookingController.AllBookings;
+            //guests = guestController.AllGuests;
+            dataGridView1.Columns.Clear(); // Clear existing columns
+            dataGridView1.Columns.Add("id", "ID");
+            dataGridView1.Columns.Add("roomDescription", "Room Description");
+            dataGridView1.Columns.Add("roomAvailable", "Available");
+            dataGridView1.Columns.Add("roomNumber", "Room Number");
+
+            // set properties like auto-size
+            dataGridView1.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridView1.Columns["roomDescription"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["roomAvailable"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridView1.Columns["roomNumber"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+           
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -71,7 +106,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
                     dataGridView1.Rows.Add(
                         room.RoomAvailibility,
                         room.RoomDescription,
-                        room.rate,
+                        //room.rate,
                         room.Id);
                       
                 }

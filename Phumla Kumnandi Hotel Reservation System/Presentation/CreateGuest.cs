@@ -36,7 +36,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
             guest.LastName = LastNameInput.Text;
             guest.Email = emailInput.Text;
             guest.Telephone = telephoneInput.Text;
-            guest.GuestID = idNumberInput.Text.Trim();
+            guest.idNumber = idNumberInput.Text.Trim();
             guest.Address = addressInput.Text;
 
 
@@ -134,7 +134,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
 
                 this.Close();
 
-                booking.GuestId = guest.GuestID;
+                booking.GuestId = guest.idNumber;
                 ConfirmBooking confirmBooking = new ConfirmBooking(guest, booking);
                 confirmBooking.ShowDialog();
             }

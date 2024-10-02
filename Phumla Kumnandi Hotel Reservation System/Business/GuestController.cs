@@ -82,12 +82,12 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Business
         public Guest Find(String ID)
         {
             int index = 0;
-            bool found = (guests[index].GuestID.Equals(ID));
+            bool found = (guests[index].idNumber.Equals(ID));
             int count = guests.Count;
             while (!(found) && (index < guests.Count - 1))
             {
                 index = index + 1;
-                found = (guests[index].GuestID.Equals(ID));
+                found = (guests[index].idNumber.Equals(ID));
             }
             return guests[index];
 
@@ -96,7 +96,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Business
         {
             for (int i = 0; i < guests.Count; i++)
             {
-                if (guests[i].GuestID == aGuest.GuestID)
+                if (guests[i].idNumber == aGuest.idNumber)
                 {
                     return i;
                 }

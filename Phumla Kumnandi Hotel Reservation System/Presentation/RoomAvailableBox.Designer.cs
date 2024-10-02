@@ -71,40 +71,46 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 9);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(94, 56);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 22);
+            this.label1.Size = new System.Drawing.Size(357, 22);
             this.label1.TabIndex = 35;
-            this.label1.Text = "The Deluxe Suite is available for ";
+            this.label1.Text = "The Presidential Suite is available for ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(176, 40);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(196, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 22);
+            this.label2.Size = new System.Drawing.Size(130, 22);
             this.label2.TabIndex = 35;
-            this.label2.Text = "the selected dates ";
+            this.label2.Text = "CURRENTLY ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(176, 101);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(231, 101);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 22);
+            this.label3.Size = new System.Drawing.Size(23, 22);
             this.label3.TabIndex = 35;
-            this.label3.Text = "Total Price: R";
+            this.label3.Text = "R";
             // 
             // bookingPriceLabel
             // 
             this.bookingPriceLabel.AutoSize = true;
             this.bookingPriceLabel.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookingPriceLabel.Location = new System.Drawing.Point(309, 101);
+            this.bookingPriceLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bookingPriceLabel.Location = new System.Drawing.Point(248, 101);
             this.bookingPriceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookingPriceLabel.Name = "bookingPriceLabel";
             this.bookingPriceLabel.Size = new System.Drawing.Size(43, 22);
@@ -124,7 +130,7 @@
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createBookingButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RoomAvailableBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RoomAvailableBox";

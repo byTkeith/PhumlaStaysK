@@ -290,6 +290,7 @@
             this.checkInDateTimePicker.Size = new System.Drawing.Size(344, 32);
             this.checkInDateTimePicker.TabIndex = 5;
             this.checkInDateTimePicker.Value = new System.DateTime(2023, 12, 1, 0, 0, 0, 0);
+            this.checkInDateTimePicker.ValueChanged += new System.EventHandler(this.checkInDateTimePicker_ValueChanged);
             // 
             // label17
             // 
@@ -313,6 +314,7 @@
             this.checkOutDateTimePicker.Size = new System.Drawing.Size(338, 32);
             this.checkOutDateTimePicker.TabIndex = 5;
             this.checkOutDateTimePicker.Value = new System.DateTime(2023, 12, 2, 0, 0, 0, 0);
+            this.checkOutDateTimePicker.ValueChanged += new System.EventHandler(this.checkOutDateTimePicker_ValueChanged);
             // 
             // label18
             // 
@@ -330,7 +332,7 @@
             // numberOfGuestPicker
             // 
             this.numberOfGuestPicker.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numberOfGuestPicker.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberOfGuestPicker.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberOfGuestPicker.Location = new System.Drawing.Point(387, 504);
             this.numberOfGuestPicker.Minimum = new decimal(new int[] {
             1,

@@ -124,12 +124,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
         }
         #endregion
 
-        private void logoutButton_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            login.Show();
-            this.Hide();
-        }
+       
 
         private void bookingNavLabel_Click(object sender, EventArgs e)
         {
@@ -165,8 +160,52 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
             guestForm.Show();
         }
 
+       
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void promotionButton_Click(object sender, EventArgs e)
+        {
+            string message = "Promotional Discounts:\n\n" +
+                     "5% Discount for stays longer than 3 weeks.\n" +
+                     "10% Discount for stays longer than 4 weeks.";
+            MessageBox.Show(message, "Promotional Discounts", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void roomNavLabel_Click(object sender, EventArgs e)
         {
+            //SetupDataGridView1();
+            //LoadData();
             if (roomsForm == null)
             {
                 CreateRoomsForm();
@@ -179,14 +218,9 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
             roomsForm.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

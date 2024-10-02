@@ -48,7 +48,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
                 {
                     guest = new Guest();
 
-                    guest.GuestID = Convert.ToString(myRow["GuestID"]).TrimEnd();
+                    guest.idNumber = Convert.ToString(myRow["idNumber"]).TrimEnd();
                     guest.Title = Convert.ToString(myRow["title"]).TrimEnd();
                     guest.FirstName = Convert.ToString(myRow["firstName"]).TrimEnd();
                     guest.LastName = Convert.ToString(myRow["lastName"]).TrimEnd();
@@ -67,7 +67,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
             {
 
 
-                row["idNumber"] = guest.GuestID;
+                row["idNumber"] = guest.idNumber;
 
 
             }
@@ -88,7 +88,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Data
                 myRow = row;
                 if (myRow.RowState != DataRowState.Deleted)
                 {
-                    if (guest.GuestID == Convert.ToString(dataSet.Tables[table].Rows[rowIndex]["idNumber"]))
+                    if (guest.idNumber == Convert.ToString(dataSet.Tables[table].Rows[rowIndex]["idNumber"]))
                     {
                         returnValue = rowIndex;
                     }

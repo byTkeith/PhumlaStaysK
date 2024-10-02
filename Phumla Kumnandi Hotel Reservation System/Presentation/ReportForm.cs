@@ -54,19 +54,19 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
                 double averageBookingValue = totalRevenue / (double)totalBookings;
                 double occupancyRate = CalculateOccupancyRate(selectedBookings);
                 double averageLengthOfStay = CalculateAverageLengthOfStay(selectedBookings);
-                string report = $"Sales Report for {startDate.ToString("MMMM yyyy")} - {endDate.ToString("MMMM yyyy")}\n";
-                report += $"Report generated on {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}\n\n";
-                report += "++++++++++++++++++\n";
+                string report = $"Sales Report for PhumlaSays from:\n {startDate.ToString("MMMM yyyy")} - {endDate.ToString("MMMM yyyy")}\n";
+                report += $"Report from {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}\n\n";
+                report += "===================\n";
                 report += "Summary:\n";
                 report += $"Total Bookings: {totalBookings}\n";
-                report += $"Total Revenue: R{totalRevenue}\n";
-                report += $"Average Booking Value: R{averageBookingValue:F2}\n";
+                report += $"Total Returns: R{totalRevenue}\n";
+                report += $"Average Booking price: R{averageBookingValue:F2}\n";
                 report += $"Occupancy Rate: {occupancyRate:F2}%\n\n";
-                report += "++++++++++++++++++\n";
+                report += "===================\n";
                 report += "Sales Performance Metrics:\n";
                 report += $"Total Revenue: R{totalRevenue}\n";
                 report += $"Total Bookings: {totalBookings}\n\n";
-                report += "++++++++++++++++++\n";
+                report += "===================\n";
                 report += "Property Analysis:\n";
                 report += $"Occupancy Rate: {occupancyRate:F2}%\n";
                 report += $"Average Length of Stay: {averageLengthOfStay:F2} days";
@@ -84,16 +84,16 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
                 double revPAR = (averageDailyRate * occupancyRate) / 100.0;
                 double averageLengthOfStay = CalculateAverageLengthOfStay(selectedBookings);
                 double averageBookingValue = totalRevenue / (double)totalBookings;
-                string report = $"Occupancy Report for {startDate.ToString("MMMM yyyy")} - {endDate.ToString("MMMM yyyy")}\n";
-                report += $"Report generated on {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}\n\n";
-                report += "++++++++++++++++++\n";
+                string report = $"Occupancy report for PhumlaStays from:\n {startDate.ToString("MMMM yyyy")} - {endDate.ToString("MMMM yyyy")}\n";
+                report += $"Report for {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}\n\n";
+                report += "=====================\n";
                 report += "Summary:\n";
                 report += $"Occupancy Rate: {occupancyRate:F2}%\n";
                 report += $"Total Rooms: 5 \n";
                 report += $"Total Bookings: {totalBookings}\n";
                 report += $"Average Length of Stay: {averageLengthOfStay:F2} days\n";
-                report += $"Average Daily Rate (ADR): R{averageDailyRate:F2}\n";
-                report += $"Revenue Per Available Room (RevPAR): R{revPAR:F2}\n";
+                report += $"Average Daily Rate: R{averageDailyRate:F2}\n";
+                report += $"Revenue Per Available Room: R{revPAR:F2}\n";
                 ReportDisplay reportDisplay = new ReportDisplay(report);
                 reportDisplay.Show();
             }
@@ -134,6 +134,23 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ReportForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();

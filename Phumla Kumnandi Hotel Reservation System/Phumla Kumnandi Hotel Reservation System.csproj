@@ -68,6 +68,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bookingSystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bookingSystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookingSystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bookingSystemDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookingSystemDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Business\Booking.cs" />
     <Compile Include="Business\BookingController.cs" />
     <Compile Include="Business\Guest.cs" />
@@ -235,6 +245,28 @@
     </None>
     <None Include="bookingSystemDataSet.xss">
       <DependentUpon>bookingSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bookingSystemDataSet1.xsc">
+      <DependentUpon>bookingSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bookingSystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bookingSystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bookingSystemDataSet1.xss">
+      <DependentUpon>bookingSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bookingSystemDataSet2.xsc">
+      <DependentUpon>bookingSystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bookingSystemDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bookingSystemDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bookingSystemDataSet2.xss">
+      <DependentUpon>bookingSystemDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

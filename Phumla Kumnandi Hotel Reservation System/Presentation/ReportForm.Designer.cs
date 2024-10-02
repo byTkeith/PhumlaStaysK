@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
-            this.checkAvailabilityButton = new System.Windows.Forms.Button();
             this.endDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.startDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
@@ -39,23 +38,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.checkAvailabilityButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // checkAvailabilityButton
-            // 
-            this.checkAvailabilityButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
-            this.checkAvailabilityButton.FlatAppearance.BorderSize = 0;
-            this.checkAvailabilityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkAvailabilityButton.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkAvailabilityButton.ForeColor = System.Drawing.Color.White;
-            this.checkAvailabilityButton.Location = new System.Drawing.Point(758, 553);
-            this.checkAvailabilityButton.Name = "checkAvailabilityButton";
-            this.checkAvailabilityButton.Size = new System.Drawing.Size(258, 44);
-            this.checkAvailabilityButton.TabIndex = 10;
-            this.checkAvailabilityButton.Text = "Generate Report";
-            this.checkAvailabilityButton.UseVisualStyleBackColor = false;
-            this.checkAvailabilityButton.Click += new System.EventHandler(this.checkAvailabilityButton_Click);
             // 
             // endDateTimePicker
             // 
@@ -143,10 +129,11 @@
             // panel3
             // 
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.Location = new System.Drawing.Point(12, 6);
+            this.panel3.Location = new System.Drawing.Point(13, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(266, 118);
             this.panel3.TabIndex = 4;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button1
             // 
@@ -162,12 +149,43 @@
             this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // checkAvailabilityButton
+            // 
+            this.checkAvailabilityButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
+            this.checkAvailabilityButton.FlatAppearance.BorderSize = 0;
+            this.checkAvailabilityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkAvailabilityButton.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkAvailabilityButton.ForeColor = System.Drawing.Color.White;
+            this.checkAvailabilityButton.Location = new System.Drawing.Point(758, 553);
+            this.checkAvailabilityButton.Name = "checkAvailabilityButton";
+            this.checkAvailabilityButton.Size = new System.Drawing.Size(258, 44);
+            this.checkAvailabilityButton.TabIndex = 10;
+            this.checkAvailabilityButton.Text = "Generate Report";
+            this.checkAvailabilityButton.UseVisualStyleBackColor = false;
+            this.checkAvailabilityButton.Click += new System.EventHandler(this.checkAvailabilityButton_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(519, 553);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(114, 44);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(98)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.reportTypePicker);
             this.Controls.Add(this.checkAvailabilityButton);
@@ -180,6 +198,7 @@
             this.Name = "ReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReportForm";
+            this.Load += new System.EventHandler(this.ReportForm_Load);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -187,7 +206,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button checkAvailabilityButton;
         private System.Windows.Forms.DateTimePicker endDateTimePicker;
         private System.Windows.Forms.DateTimePicker startDateTimePicker;
         private System.Windows.Forms.Label label17;
@@ -197,5 +215,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button checkAvailabilityButton;
+        private System.Windows.Forms.Button button2;
     }
 }

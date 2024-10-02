@@ -31,6 +31,8 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
         {
             InitializeComponent();
             this.dataLanel.Text = DateTime.Now.Date.ToString("dddd, MMMM dd, yyyy");
+            checkInDateTimePicker.Value = DateTime.Now;
+            checkOutDateTimePicker.Value = DateTime.Now;
             this.notAvailableLabel.Visible = false;
             this.guestController = MDIParent.GetGuestController();
             this.bookingController = MDIParent.GetBookingController();
@@ -260,6 +262,16 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
         private void label20_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkInDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            checkInDateTimePicker.Value = DateTime.Now;
+        }
+
+        private void checkOutDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            checkInDateTimePicker.Value = DateTime.Now;
         }
     }
 }

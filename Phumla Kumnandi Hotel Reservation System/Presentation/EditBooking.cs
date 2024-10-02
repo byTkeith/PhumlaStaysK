@@ -141,5 +141,10 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
             this.Close();
 
         }
+
+        private void checkInDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -56,7 +56,7 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
 
 
 
-#region settign up he list view
+#region settign up  list view
         public void setUpGuestListView()
         {
             ListViewItem guestDetails;
@@ -75,14 +75,14 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
 
             foreach (Guest guest in guests)
             {
-                guestDetails = new ListViewItem(guest.GuestID.ToString());
+                guestDetails = new ListViewItem(guest.idNumber.ToString());
               
                 guestDetails.SubItems.Add(guest.FirstName.ToString());
               
                 guestDetails.SubItems.Add(guest.Email.ToString());
                 guestDetails.SubItems.Add(guest.Telephone.ToString());
                 guestDetails.SubItems.Add(guest.Address.ToString());
-                guestDetails.SubItems.Add(CalculateUnpaidAmountForGuest(guest.GuestID , bookings).ToString());
+                guestDetails.SubItems.Add(CalculateUnpaidAmountForGuest(guest.idNumber , bookings).ToString());
                 guestListView.Items.Add(guestDetails);
             }
             guestListView.Refresh();
@@ -152,12 +152,12 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
                     guest.Email.ToLower().Contains(searchTerm) ||
                     guest.Telephone.ToLower().Contains(searchTerm))
                 {
-                    ListViewItem guestDetails = new ListViewItem(guest.GuestID.ToString());
+                    ListViewItem guestDetails = new ListViewItem(guest.idNumber.ToString());
                     guestDetails.SubItems.Add(guest.FirstName.ToString());
                     guestDetails.SubItems.Add(guest.Email.ToString());
                     guestDetails.SubItems.Add(guest.Telephone.ToString());
                     guestDetails.SubItems.Add(guest.Address.ToString());
-                    guestDetails.SubItems.Add(CalculateUnpaidAmountForGuest(guest.GuestID, bookings).ToString());
+                    guestDetails.SubItems.Add(CalculateUnpaidAmountForGuest(guest.idNumber, bookings).ToString());
                     guestListView.Items.Add(guestDetails);
                 }
             }

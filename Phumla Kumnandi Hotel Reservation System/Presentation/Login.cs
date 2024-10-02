@@ -38,14 +38,14 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System
             string username = userNameInput.Text;
             string password = passwordInput.Text;
 
-            if (username == "Jane" && password == "receptionist")
+            if (username == "Karen" && password == "smith")
             {
                 // Open the MDIParent form
                 MDIParent mdiParentForm = new MDIParent();
                 mdiParentForm.Show();
                 this.Hide();
             }
-            else if (username == "admin" && password == "root")
+            else if (username == "admin" && password == "userone")
             {
                 // Open the report form
                 ReportForm reportForm = new ReportForm();

@@ -97,9 +97,11 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
 
             foreach (Booking abooking in bookings)
             {
-                Guest guest = guests.FirstOrDefault(g => g.GuestID == abooking.GuestId);
+                Guest guest = guests.FirstOrDefault(g => g.idNumber == abooking.GuestId);
                 bookingDetails = new ListViewItem(abooking.Id.ToString());
-                bookingDetails.SubItems.Add(guest.FirstName);
+                //guest = new Guest();
+               
+                bookingDetails.SubItems.Add(abooking.GuestId);
                 bookingDetails.SubItems.Add(abooking.CheckInDate.ToString("yyyy-MM-dd"));
                 bookingDetails.SubItems.Add(abooking.CheckOutDate.ToString("yyyy-MM-dd"));
                 bookingDetails.SubItems.Add(abooking.NumberOfGuests.ToString());
@@ -157,14 +159,14 @@ namespace Phumla_Kumnandi_Hotel_Reservation_System.Presentation
             // Create a list to store matching guest IDs
             List<String> matchingGuestIds = guests
                 .Where(guest => guest.FirstName.ToLower().Contains(searchGuestName))
-                .Select(guest => guest.GuestID)
+                .Select(guest => guest.idNumber)
                 .ToList();
 
             foreach (Booking abooking in bookings)
             {
                 if (matchingGuestIds.Contains(abooking.GuestId))
                 {
-                    Guest guest = guests.FirstOrDefault(g => g.GuestID == abooking.GuestId);
+                    Guest guest = guests.FirstOrDefault(g => g.idNumber == abooking.GuestId);
                     ListViewItem bookingDetails = new ListViewItem(abooking.Id.ToString());
                     bookingDetails.SubItems.Add(guest.FirstName);
                     bookingDetails.SubItems.Add(abooking.CheckInDate.ToString("yyyy-MM-dd"));

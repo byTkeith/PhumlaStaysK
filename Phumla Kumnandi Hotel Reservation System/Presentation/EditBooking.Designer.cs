@@ -165,6 +165,7 @@
             this.checkInDateTimePicker.Size = new System.Drawing.Size(344, 32);
             this.checkInDateTimePicker.TabIndex = 45;
             this.checkInDateTimePicker.Value = new System.DateTime(2023, 12, 1, 0, 0, 0, 0);
+            this.checkInDateTimePicker.ValueChanged += new System.EventHandler(this.checkInDateTimePicker_ValueChanged);
             // 
             // checkOutDateTimePicker
             // 
